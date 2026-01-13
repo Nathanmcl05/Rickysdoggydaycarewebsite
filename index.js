@@ -3,14 +3,14 @@ var app = express()
 
 app.set('view engine', 'ejs') // set template engine
 
-app.get('/home', (req, res) => {
+app.get('views/home', (req, res) => {
 
     res.render('home')
     
 })
 
 
-app.get('/about', (req, res) => {
+app.get('views/about', (req, res) => {
 
     res.render('about')
     
