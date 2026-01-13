@@ -3,7 +3,7 @@ var app = express()
 
 app.set('view engine', 'ejs') // set template engine
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
 
     res.render('home')
     
