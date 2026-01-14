@@ -11,6 +11,10 @@ app.get('/about', (req, res) => {
     res.render('about')
 })
 
+app.get('/booking', (req, res) => {
+    res.render('booking')
+})
+
 //********************* Code to here *************/
 
 app.listen(process.env.Port || 3000, process.env.IP || "0.0.0.0" , function(){
