@@ -305,55 +305,60 @@
   </section>
 
   <section id="services">
-    <h2><i class="fa-solid fa-paw"></i>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <i class="fa-solid fa-dog"></i>
-        <h3>Daycare</h3>
-        <p>Supervised playtime all day long.</p>
-      </div>
+  <h2><i class="fa-solid fa-paw"></i>Our Services</h2>
 
-      <div class="service-card">
-        <i class="fa-solid fa-house"></i>
-        <h3>Overnight Boarding</h3>
-        <p>Cozy stays while you're away.</p>
-      </div>
-
-      <div class="service-card">
-        <i class="fa-solid fa-scissors"></i>
-        <h3>Grooming</h3>
-        <p>Baths, trims, and nail care.</p>
-      </div>
-      <div class="pricing-btn-container">
-      <button class="pricing-btn" onclick="openPricing()">
-  <i class="fa-solid fa-tag"></i> View Prices
-  </button> </div>
-  <!-- Pricing Modal -->
-<div id="pricingModal" class="modal-overlay" style="display: none;">
-  <div class="pricing-modal">
-    <button class="close-btn" onclick="closePricing()">×</button>
-    <h2>Our Prices</h2>
-    <div class="pricing-list">
-      <div class="pricing-item">
-        <span class="service">Doggy Daycare</span>
-        <span class="price">€25 / day</span>
-      </div>
-      <div class="pricing-item">
-        <span class="service">Overnight Boarding</span>
-        <span class="price">€40 / night</span>
-      </div>
-      <div class="pricing-item highlight">
-        <span class="service">Grooming</span>
-        <span class="price">€60 – €80</span>
-      </div>
+  <!-- Service Cards Grid -->
+  <div class="services">
+    <div class="service-card">
+      <i class="fa-solid fa-dog"></i>
+      <h3>Daycare</h3>
+      <p>Supervised playtime all day long.</p>
     </div>
-    <p class="promo-note">Introductory and promotional offers may apply.</p>
+
+    <div class="service-card">
+      <i class="fa-solid fa-house"></i>
+      <h3>Overnight Boarding</h3>
+      <p>Cozy stays while you're away.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-scissors"></i>
+      <h3>Grooming</h3>
+      <p>Baths, trims, and nail care.</p>
+    </div>
   </div>
-</div>
 
-</button>
+  <!-- Centered View Prices Button -->
+  <div class="pricing-btn-container">
+    <button class="pricing-btn" onclick="openPricing()">
+      <i class="fa-solid fa-tag"></i> View Prices
+    </button>
+  </div>
+
+  <!-- Pricing Modal -->
+  <div id="pricingModal" class="modal-overlay" style="display: none;">
+    <div class="pricing-modal">
+      <button class="close-btn" onclick="closePricing()">×</button>
+      <h2>Our Prices</h2>
+      <div class="pricing-list">
+        <div class="pricing-item">
+          <span class="service">Doggy Daycare</span>
+          <span class="price">€25 / day</span>
+        </div>
+        <div class="pricing-item">
+          <span class="service">Overnight Boarding</span>
+          <span class="price">€40 / night</span>
+        </div>
+        <div class="pricing-item highlight">
+          <span class="service">Grooming</span>
+          <span class="price">€60 – €80</span>
+        </div>
+      </div>
+      <p class="promo-note">Introductory and promotional offers may apply.</p>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="cta">
     <h2>Ready to Join the Pack?</h2>
