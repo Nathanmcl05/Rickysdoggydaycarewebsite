@@ -18,6 +18,9 @@ app.get('/about', (req, res) => {
     res.render('about')
 })
 
+app.get('/log', (req, res) => {
+    res.render('log')
+})
 
 
 

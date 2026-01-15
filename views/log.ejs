@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+/* Styling the login page for dogcare*/
+
+body {
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    line-height: 1.7;
+    min-height: 50vh;
+    background: rgb(0, 153, 255);
+}
+ 
+.main {
+
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 400px;
+}
+
+h1 {
+
+    color: rgb(0, 110, 255);
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h3 {
+
+    color: rgb(0, 119, 255);
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+p {
+
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+label {
+
+    display: block;
+    margin-left: 8%;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(0, 132, 255);
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+        </style>
+        <title>Login page for Doy care</title>
+        <link href="CSS/style.css" rel="stylesheet">
+        <meta name="author" content="Dawid S">
+        <meta name="description" content="HTML login form for Dog care">
+        <meta name="viewport" content="width-device width initiAL scale = 1.0">
+        <meta http-equiv="refresh" content="30">
+    </head>
+
+    <body>
+        <!--Add headings-->
+        <div class="main">
+            <h1>Login into Rickys doggy daycare</h1>
+            <h3>Enter your login details</h3>
+
+            <!--Creating labels-->
+            <form action="">
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" name="email"
+                placeholder="Enter your email" required>
+
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="password" name="password"
+                placeholder="Enter your password" required>
+
+                <!--Creating button-->
+                <div class="wrap">
+                    <button type="Login">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+            <p>Not registered?
+                <a href="#" style="text-decoration: none;">
+                    Create an account
+                </a>
+            </p>
+        </div>
+    </body>
+</html>
