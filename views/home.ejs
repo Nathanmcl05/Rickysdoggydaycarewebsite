@@ -132,9 +132,39 @@
     footer i {
       color: var(--yellow);
     }
+    .chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+.chatbot-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 600px) {
+  .chatbot-container {
+    width: 90%;
+    height: 70%;
+    right: 5%;
+    bottom: 10px;
+  }
+}
   </style>
 </head>
-
+<div class="chatbot-container">
+  <iframe
+    src="https://www.chatbase.co/chatbot-iframe/F_wnDVksq-2ITe7sNTOhc"
+    frameborder="0">
+  </iframe>
+</div>
 <body>
 
 <header>
