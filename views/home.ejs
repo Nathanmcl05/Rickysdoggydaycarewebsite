@@ -199,6 +199,81 @@
   }
 }
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.pricing-modal {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Close Button */
+.pricing-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Pricing Items */
+.pricing-list {
+  margin-top: 20px;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.pricing-item.highlight {
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.promo-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Button */
+.pricing-btn {
+  padding: 12px 25px;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.pricing-btn:hover {
+  background: var(--dark-blue);
+}
 
   </style>
 </head>
@@ -244,6 +319,32 @@
         <h3>Grooming</h3>
         <p>Baths, trims, and nail care.</p>
       </div>
+      <button class="pricing-btn" onclick="openPricing()">
+  <i class="fa-solid fa-tag"></i> View Prices
+  <!-- Pricing Modal -->
+<div id="pricingModal" class="modal-overlay" style="display: none;">
+  <div class="pricing-modal">
+    <button class="close-btn" onclick="closePricing()">×</button>
+    <h2>Our Prices</h2>
+    <div class="pricing-list">
+      <div class="pricing-item">
+        <span class="service">Doggy Daycare</span>
+        <span class="price">€25 / day</span>
+      </div>
+      <div class="pricing-item">
+        <span class="service">Overnight Boarding</span>
+        <span class="price">€40 / night</span>
+      </div>
+      <div class="pricing-item highlight">
+        <span class="service">Grooming</span>
+        <span class="price">€60 – €80</span>
+      </div>
+    </div>
+    <p class="promo-note">Introductory and promotional offers may apply.</p>
+  </div>
+</div>
+
+</button>
     </div>
   </section>
 
@@ -300,6 +401,22 @@
     chatbot.style.display = "none";
     chatToggle.style.display = "flex";
   });
+  function openPricing() {
+  document.getElementById('pricingModal').style.display = 'flex';
+}
+
+function closePricing() {
+  document.getElementById('pricingModal').style.display = 'none';
+}
+
+// Optional: close modal if user clicks outside the modal box
+window.addEventListener('click', function(e) {
+  const modal = document.getElementById('pricingModal');
+  if(e.target === modal){
+    modal.style.display = 'none';
+  }
+});
+
 </script>
 
 </body>
