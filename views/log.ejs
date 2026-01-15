@@ -1,132 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <style>
-/* Styling the login page for dogcare*/
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Ricky's Doggy Daycare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    line-height: 1.7;
-    min-height: 50vh;
-    background: rgb(0, 153, 255);
-}
- 
-.main {
+  <style>
+    :root {
+      --blue: #1e88e5;
+      --yellow: #fdd835;
+      --white: #ffffff;
+      --light-blue: #e3f2fd;
+      --gray: #f5f5f5;
+      --text-dark: #333;
+    }
 
-    background-color: #fff;
-    border-radius: 15px;
-    margin-top: 20px;
-    width: 400px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-h1 {
+    body {
+      background-color: var(--light-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-    color: rgb(0, 110, 255);
-    font-family: sans-serif;
-    text-align: center;
-    letter-spacing: 2px;
-}
+    .login-container {
+      background-color: var(--white);
+      border-radius: 15px;
+      width: 400px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+    }
 
-h3 {
+    .login-container img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
 
-    color: rgb(0, 119, 255);
-    text-align: center;
-    letter-spacing: 2px;
-    text-decoration: underline;
-}
+    .login-container h1 {
+      color: var(--blue);
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
 
-p {
+    .login-container h3 {
+      color: var(--text-dark);
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
 
-    text-align: center;
-    text-decoration: underline;
+    .login-container label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: var(--text-dark);
+      font-weight: bold;
+      margin-left: 5%;
+    }
 
-}
+    .login-container input {
+      display: block;
+      width: 90%;
+      margin: 0 auto 20px auto;
+      padding: 10px;
+      border: 1px solid var(--gray);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
 
-label {
+    .login-container button {
+      background-color: var(--blue);
+      color: var(--white);
+      border: none;
+      padding: 12px 0;
+      width: 95%;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-    display: block;
-    margin-left: 8%;
-    width: 80%;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
+    .login-container button:hover {
+      background-color: var(--dark-blue);
+    }
 
-input {
+    .login-container p {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+    .login-container p a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-button {
+    /* Responsive */
+    @media(max-width: 450px){
+      .login-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
 
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: rgb(0, 132, 255);
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-}
-        </style>
-        <title>Login page for Doy care</title>
-        <link href="CSS/style.css" rel="stylesheet">
-        <meta name="author" content="Dawid S">
-        <meta name="description" content="HTML login form for Dog care">
-        <meta name="viewport" content="width-device width initiAL scale = 1.0">
-        <meta http-equiv="refresh" content="30">
-    </head>
+<body>
 
-    <body>
-        <!--Add headings-->
-        <div class="main">
-            <h1>Login into Rickys doggy daycare</h1>
-            <h3>Enter your login details</h3>
+  <div class="login-container">
+    <img src="/images/rickys.png" alt="Ricky's Doggy Daycare Logo">
+    <h1>Welcome Back!</h1>
+    <h3>Login to your account</h3>
 
-            <!--Creating labels-->
-            <form action="">
-                <p>
-  <a href="home.ejs" style="text-decoration:none;color:rgb(0,110,255);">
-    ← Back to Homepage
-  </a>
-</p>
-                <label for="email">
-                    Email
-                </label>
-                <input type="email" id="email" name="email"
-                placeholder="Enter your email" required>
+    <form action="/login" method="POST">
+      <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-                <label for="password">
-                    Password
-                </label>
-                <input type="password" id="password" name="password"
-                placeholder="Enter your password" required>
+      <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-                <!--Creating button-->
-                <div class="wrap">
-                    <button type="Login">
-                        Login
-                    </button>
-                </div>
-            </form>
+      <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+    </form>
 
-            <p>Not registered?
-                <a href="#" style="text-decoration: none;">
-                    Create an account
-                </a>
-            </p>
-        </div>
-    </body>
+    <p>Not registered? <a href="/register">Create an account</a></p>
+  </div>
+
+</body>
 </html>
