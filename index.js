@@ -21,6 +21,9 @@ app.get('/about', (req, res) => {
 app.get('/log', (req, res) => {
     res.render('log')
 })
+app.get('/payment', (req, res) => {
+    res.render('payment')
+})
 
 
 
