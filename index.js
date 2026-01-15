@@ -3,6 +3,8 @@ var app = express()
 
 app.set('view engine', 'ejs') // set template engine
 
+app.use(express.static("public")); 
+
 app.get('/', (req, res) => {
     res.render('home')
 })
@@ -15,6 +17,10 @@ app.get('/booking', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about')
 })
+
+
+
+
 //********************* Code to here *************/
 
 app.listen(process.env.Port || 3000, process.env.IP || "0.0.0.0" , function(){
