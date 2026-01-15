@@ -187,38 +187,53 @@
   const form = document.getElementById("bookingForm");
   const bookingList = document.getElementById("bookingList");
   const dateInput = document.getElementById("date");
+  const serviceSelect = document.getElementById("service");
 
- const today = new Date();
- today.setHours(0, 0, 0, 0);
- today.setDate(today.getDate() + 1);
+  
+  const minBookingDate = new Date();
+  minBookingDate.setHours(0, 0, 0, 0);
+  minBookingDate.setDate(minBookingDate.getDate() + 1);
 
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, "0");
-  const dd = String(today.getDate()).padStart(2, "0");
+  function formatDate(date) {
+    return date.toISOString().split("T")[0];
+  }
 
-  dateInput.min = `${yyyy}-${mm}-${dd}`;
+  dateInput.min = formatDate(minBookingDate);
+
+  
+  dateInput.addEventListener("invalid", () => {
+    dateInput.setCustomValidity(
+      "Please choose a valid booking date. Bookings must be made at least one day in advance."
+    );
+  });
+
   dateInput.addEventListener("input", () => {
-  dateInput.setCustomValidity("");
-});
+    dateInput.setCustomValidity("");
+  });
 
-  form.addEventListener("submit", function(e) {
+  
+  serviceSelect.addEventListener("invalid", () => {
+    serviceSelect.setCustomValidity(
+      "Please select a service before confirming your booking."
+    );
+  });
+
+  serviceSelect.addEventListener("change", () => {
+    serviceSelect.setCustomValidity("");
+  });
+
+  
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const owner = document.getElementById("owner").value;
     const dog = document.getElementById("dog").value;
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
+    const service = serviceSelect.value;
+    const date = dateInput.value;
     const time = document.getElementById("time").value;
 
     const selectedDate = new Date(date);
-    if (selectedDate < today) {
-  dateInput.setCustomValidity(
-    "Please choose a valid booking date. Bookings must be made at least one day in advance."
-  );
-  dateInput.reportValidity();
-  return;
-}
-
+    if (selectedDate < minBookingDate) return;
 
     const booking = document.createElement("div");
     booking.classList.add("booking-item");
