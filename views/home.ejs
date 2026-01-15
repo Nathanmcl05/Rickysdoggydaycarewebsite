@@ -310,19 +310,21 @@
   <!-- Service Cards Grid -->
   <div class="services">
     <div class="service-card">
-      <a href="/booking" class="book-btn"></a>
+      <a href="/booking" class="service-link"></a>
       <i class="fa-solid fa-dog"></i>
       <h3>Daycare</h3>
       <p>Supervised playtime all day long.</p>
     </div>
 
     <div class="service-card">
+      <a href="/booking" class="service-link"></a>
       <i class="fa-solid fa-house"></i>
       <h3>Overnight Boarding</h3>
       <p>Cozy stays while you're away.</p>
     </div>
 
     <div class="service-card">
+      <a href="/booking" class="service-link"></a>
       <i class="fa-solid fa-scissors"></i>
       <h3>Grooming</h3>
       <p>Baths, trims, and nail care.</p>
@@ -421,6 +423,11 @@
 function closePricing() {
   document.getElementById('pricingModal').style.display = 'none';
 }
+
+  function booking() {href="/booking"}
+    
+
+  
 
 // Optional: close modal if user clicks outside the modal box
 window.addEventListener('click', function(e) {
