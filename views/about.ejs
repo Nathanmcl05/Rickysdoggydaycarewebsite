@@ -13,7 +13,6 @@
       --blue: #bbd8ee;
       --yellow: #ffc767;
       --white: #ffffff;
-      --light-blue: #e3f2fd;
       --dark-blue: #1565c0;
       --gray: #f5f5f5;
       --text-dark: #333;
@@ -27,7 +26,7 @@
     }
 
     body {
-      background-image: url('images/background.jpg');
+      background-image: url('images/background.jpg'); /* Same as home page */
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -36,30 +35,51 @@
       min-height: 100vh;
     }
 
+    /* Header like home page */
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
       color: var(--white);
+      background-image: url('images/background.jpg'); /* same background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: var(--yellow);
     }
 
     header h1 {
-      margin-top: 15px;
-      font-size: 2rem;
+      margin-top: 10px;
+      font-size: 2.5rem;
     }
 
-    /* "About" heading above the box */
-    .about-heading {
-      text-align: center;
+    /* Navigation like home page */
+    nav {
+      background-color: var(--blue);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
       color: var(--white);
-      font-size: 1.8rem;
-      margin: 30px 0 10px 0;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    /* Main white box for journey + mission */
+    nav a i {
+      margin-right: 8px;
+    }
+
+    /* White content box */
     main {
       max-width: 900px;
-      margin: 0 auto 40px auto;
+      margin: 40px auto;
       padding: 30px 25px;
       background-color: var(--white);
       border-radius: 15px;
@@ -84,23 +104,35 @@
       text-align: center;
       padding: 20px;
     }
+
+    footer i {
+      color: var(--yellow);
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <i class="fa-solid fa-heart fa-2x"></i>
-    <h1>About Rick's Doggy Daycare</h1>
+    <i class="fa-solid fa-heart"></i>
+    <h1>About Ricky's Doggy Daycare</h1>
   </header>
 
-  <!-- About heading above the white box -->
-  <div class="about-heading">About</div>
+  <!-- Navigation same as home page -->
+  <nav>
+    <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+    <a href="/about"><i class="fa-solid fa-paw"></i>About</a>
+    <a href="/booking"><i class="fa-solid fa-bone"></i>Booking</a>
+    <a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
+  </nav>
 
-  <!-- White box for journey + mission -->
+  <!-- White box for About content -->
   <main>
     <h3>Our Journey</h3>
     <p>Ricky’s Doggy Daycare was founded by Ricky, a lifelong dog lover who grew up with a Golden Labrador, Bailey, by his side, learning firsthand the loyalty, joy, and companionship that dogs bring into everyday life. He developed a strong passion for dog care and grooming from an early age.</p>
 
     <p>As he got older, Ricky began babysitting his friends', neighbours', and local families’ dogs while they were away. He gained hands-on experience looking after dogs of all breeds, learning the importance of safety, routine, and individual attention. What started as a simple favour quickly became something he genuinely loved. Spending time caring for different dogs, learning their personalities, and earning their trust made him realise that working with dogs wasn’t just a hobby, it was a passion.</p>
 
-    <p>Ricky noticed a growing need in Cork for a safe, reliable, and caring dog daycare service. Seeing how much joy and fulf
+    <p>Ricky noticed a growing need in Cork for a safe, reliable, and caring dog daycare service. Seeing how much joy and fulfilment this brought him, Ricky decided to open a small doggy daycare from his own home...</p>
+
+    <h3>Our Mission Statement</h3>
+    
