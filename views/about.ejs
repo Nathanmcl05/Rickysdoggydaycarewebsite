@@ -27,9 +27,14 @@
     }
 
     body {
-      background-color: var(--light-blue);
+      /* Background image */
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       color: var(--text-dark);
       line-height: 1.6;
+      min-height: 100vh;
     }
 
     header {
@@ -39,66 +44,38 @@
       padding: 40px 20px;
     }
 
-    nav {
-      background-color: var(--blue);
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
+    header h1 {
+      margin-top: 15px;
+      font-size: 2rem;
     }
 
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a i {
-      margin-right: 8px;
+    header p {
+      max-width: 800px;
+      margin: 15px auto;
+      line-height: 1.8;
+      font-size: 1rem;
+      text-align: justify;
+      color: #fff;
     }
 
     main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: var(--white); /* White box */
+      border-radius: 15px;            /* Rounded corners */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Soft shadow */
     }
 
-    section {
-      background-color: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    main h3 {
+      margin-top: 25px;
+      color: var(--dark-blue);
     }
 
-    section h2 i {
-      color: var(--yellow);
-      margin-right: 10px;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .about-content img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      height: 220px;
-      object-fit: cover;
+    main p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      color: var(--text-dark);
     }
 
     footer {
@@ -106,41 +83,30 @@
       color: var(--white);
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
-  <style>
-  header p {
-  max-width: 800px;   /* Limit the width for easier reading */
-  margin: 15px auto;  /* Space between paragraphs */
-  line-height: 1.8;   /* More breathing room between lines */
-  font-size: 1rem;    /* Make text a comfortable size */
-  text-align: justify; /* Optional: makes paragraphs look neat */
-  color: #fff;        /*Since header has a gradient background */
-}
-header h3 {
-  color: #fff;
-  margin-top: 25px;
-}
-</style>
+  <header>
+    <i class="fa-solid fa-heart fa-2x"></i>
+    <h1>About Rick's Doggy Daycare</h1>
+  </header>
+
+  <main>
+    <p>Ricky’s Doggy Daycare was founded by Ricky, a lifelong dog lover who grew up with a Golden Labrador, Bailey, by his side, learning firsthand the loyalty, joy, and companionship that dogs bring into everyday life. He developed a strong passion for dog care and grooming from an early age.</p>
+
+    <p>As he got older, Ricky began babysitting his friends', neighbours', and local families’ dogs while they were away. He gained hands-on experience looking after dogs of all breeds, learning the importance of safety, routine, and individual attention. What started as a simple favour quickly became something he genuinely loved. Spending time caring for different dogs, learning their personalities, and earning their trust made him realise that working with dogs wasn’t just a hobby, it was a passion.</p>
+
+    <p>Ricky noticed a growing need in Cork for a safe, reliable, and caring dog daycare service. Seeing how much joy and fulfilment this brought him, Ricky decided to open a small doggy daycare from his own home...</p>
+
+    <h3>Our Mission Statement</h3>
+    <p>At Ricky’s Doggy Daycare, our mission is to provide a safe, loving, and fun environment where every dog is treated like family. We are committed to offering high-quality care, personalised attention, and professional grooming services, ensuring dogs are happy, healthy, and excited to come back. Our goal is to give owners peace of mind, knowing their pets are in trusted hands.</p>
+  </main>
+
+  <footer>
+    &copy; 2026 Ricky’s Doggy Daycare. All rights reserved.
+  </footer>
 </body>
-
-<header>
-<i class="fa-solid fa-heart fa-2x"></i>
-  <h1>About Rick's Doggy Daycare</h1>
-</header>
-  
-<body>
-  <p>Ricky’s Doggy Daycare was founded by Ricky, a lifelong dog lover who grew up with a Golden Labrador, Bailey, by his side, learning firsthand the loyalty, joy, and companionship that dogs bring into everyday life. He developed a strong passion for dog care and grooming from an early age.</p>
-
-<p>As he got older, Ricky began babysitting his friends', neighbours', and local families’ dogs while they were away. He gained hands-on experience looking after dogs of all breeds, learning the importance of safety, routine, and individual attention. What started as a simple favour quickly became something he genuinely loved. Spending time caring for different dogs, learning their personalities, and earning their trust made him realise that working with dogs wasn’t just a hobby, it was a passion.</p>
-
-<p>Ricky noticed a growing need in Cork for a safe, reliable, and caring dog daycare service. Seeing how much joy and fulfilment this brought him, Ricky decided to open a small doggy daycare from his own home...</p>
-
-<h3>Our Mission Statement</h3>
- <P>
-At Ricky’s Doggy Daycare, our mission is to provide a safe, loving, and fun environment where every dog is treated like family. We are committed to offering high-quality care, personalised attention, and professional grooming services, ensuring dogs are happy, healthy, and excited to come back. Our goal is to give owners peace of mind, knowing their pets are in trusted hands.
- </P>
-</body>
+</html>
