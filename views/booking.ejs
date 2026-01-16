@@ -215,6 +215,11 @@
     // Redirect to payment page
     window.location.href = "/payment";
   });
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get("service");
+  if (service) {
+    document.getElementId("service").value = service;
+  }
 </script>
 
 </body>
