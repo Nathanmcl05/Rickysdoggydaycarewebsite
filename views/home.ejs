@@ -325,7 +325,26 @@
 .social-links a:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
 
 
   </style>
@@ -342,6 +361,7 @@
   <a href="/booking"><i class="fa-solid fa-bone"></i>Booking</a>
   <a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
   <a href="/log"><i class="fa-solid fa-user"></i> Login</a>
+  <a href="#gallery"><i class="fa-solid fa-images"></i>Gallery</a>
 </nav>
 
 <main>
@@ -381,6 +401,19 @@
       <p>Baths, trims, and nail care.</p>
     </div>
   </a>
+  <section id="gallery">
+  <h2><i class="fa-solid fa-camera"></i>Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="/images/gallery1.jpg" alt="Dogs playing at daycare">
+    <img src="/images/gallery2.jpg" alt="Happy dogs outdoors">
+    <img src="/images/gallery3.jpg" alt="Dog grooming session">
+    <img src="/images/gallery4.jpg" alt="Relaxing nap time">
+    <img src="/images/gallery5.jpg" alt="Dogs socialising">
+    <img src="/images/gallery6.jpg" alt="Playtime fun">
+  </div>
+</section>
+
 
 </div>
 
