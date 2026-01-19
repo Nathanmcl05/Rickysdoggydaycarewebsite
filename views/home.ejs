@@ -292,6 +292,41 @@
   color: inherit;
   display: block;
 }
+/* Social Media Icons */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  width: 45px;
+  height: 45px;
+  background-color: var(--blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+.social-links a:hover {
+  background-color: var(--yellow);
+  color: var(--text-dark);
+  transform: translateY(-4px);
+}
+
+/* Optional: subtle press effect */
+.social-links a:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 
   </style>
 </head>
