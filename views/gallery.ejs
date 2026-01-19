@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Ricky's Doggy Daycare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --blue: #bbd8ee;
+      --yellow: #ffc767;
+      --white: #ffffff;
+      --gray: #f5f5f5;
+      --text-dark: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--gray);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url("/images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header img {
+      max-width: 220px;
+    }
+
+    nav {
+      background-color: var(--blue);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    section h2 i {
+      color: var(--yellow);
+      margin-right: 10px;
+    }
+
+    /* ===== GALLERY GRID ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      background-color: var(--gray);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    footer {
+      background-color: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer i {
+      color: var(--yellow);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="/images/rickys.png" alt="Ricky's Doggy Daycare Logo">
+</header>
+
+<nav>
+  <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+  <a href="/about"><i class="fa-solid fa-paw"></i>About</a>
+  <a href="/booking"><i class="fa-solid fa-calendar-check"></i>Booking</a>
+  <a href="/gallery"><i class="fa-solid fa-camera"></i>Gallery</a>
+  <a href="/contact"><i class="fa-solid fa-phone"></i>Contact</a>
+</nav>
+
+<main>
+  <section>
+    <h2><i class="fa-solid fa-camera-retro"></i>Our Happy Pups</h2>
+
+    <div class="gallery-grid">
+      <!-- Replace image paths with your real images -->
+      <div class="gallery-item">
+        <img src="/images/gallery1.jpg" alt="Happy dogs playing">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/gallery2.jpg" alt="Dogs relaxing">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/gallery3.jpg" alt="Grooming time">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/gallery4.jpg" alt="Outdoor play">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/gallery5.jpg" alt="Puppy daycare">
+      </div>
+
+      <div class="gallery-item">
+        <img src="/images/gallery6.jpg" alt="Boarding dogs">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><i class="fa-solid fa-paw"></i> © 2026 Ricky's Doggy Daycare</p>
+</footer>
+
+</body>
+</html>

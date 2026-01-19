@@ -27,6 +27,9 @@ app.get('/payment', (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register')
 })
+app.get('/gallery', (req, res) => {
+    res.render('gallery')
+})
 
 
 
