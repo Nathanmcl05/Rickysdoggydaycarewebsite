@@ -118,10 +118,35 @@
         padding: 30px 20px;
       }
     }
+    nav {
+      background-color: var(--blue);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
   </style>
 </head>
 
 <body>
+  <nav>
+  <a href="/about"><i class="fa-solid fa-paw"></i>About</a>
+  <a href="/booking"><i class="fa-solid fa-bone"></i>Booking</a>
+  <a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
+  <a href="/log"><i class="fa-solid fa-user"></i> Login</a>
+  <a href="#gallery"><i class="fa-solid fa-images"></i>Gallery</a>
+</nav>
 
   <div class="login-container">
     <img src="/images/rickys.png" alt="Ricky's Doggy Daycare Logo">
