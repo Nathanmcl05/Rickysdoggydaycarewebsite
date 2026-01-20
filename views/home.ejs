@@ -288,7 +288,6 @@
   margin-top: 15px;
 }
 
-
 .service-link {
   text-decoration: none;
   color: inherit;
@@ -394,14 +393,17 @@
   <!-- Service Cards Grid -->
   <div class="services">
 
-  <a href="/booking?service=Daycare" class="service-link">
-    <div class="service-card">
-      <i class="fa-solid fa-dog"></i>
-      <h3>Daycare</h3>
-      <p>Supervised playtime all day long.</p>
-    </div>
-  </a>
+  <!-- Daycare -->
+<a href="/booking?service=Daycare" class="service-link">
+  <div class="service-card">
+    <i class="fa-solid fa-dog"></i>
+    <h3>Daycare</h3>
+    <p>Supervised playtime all day long.</p>
+  </div>
+</a>
 
+<!-- Overnight Boarding + View Prices -->
+<div>
   <a href="/booking?service=Overnight Boarding" class="service-link">
     <div class="service-card">
       <i class="fa-solid fa-house"></i>
@@ -410,20 +412,22 @@
     </div>
   </a>
 
- <a href="/booking?service=Grooming" class="service-link">
+  <div class="pricing-btn-container">
+    <button class="pricing-btn" onclick="openPricing()">
+      <i class="fa-solid fa-tag"></i> View Prices
+    </button>
+  </div>
+</div>
+
+<!-- Grooming -->
+<a href="/booking?service=Grooming" class="service-link">
   <div class="service-card">
     <i class="fa-solid fa-scissors"></i>
     <h3>Grooming</h3>
     <p>Baths, trims, and nail care.</p>
   </div>
-</a>
 
-<!-- Centered View Prices Button -->
-<div class="pricing-btn-container">
-  <button class="pricing-btn" onclick="openPricing()">
-    <i class="fa-solid fa-tag"></i> View Prices
-  </button>
-</div>
+
 
   </a>
   </section>
