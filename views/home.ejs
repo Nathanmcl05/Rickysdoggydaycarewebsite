@@ -283,9 +283,11 @@
   background: var(--dark-blue);
 }
 .pricing-btn-container {
-  text-align: center;  /* Centers inline/inline-block elements inside */
-  margin-top: 10px;    /* Optional spacing */
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
+
 
 .service-link {
   text-decoration: none;
@@ -408,18 +410,21 @@
     </div>
   </a>
 
-  <a href="/booking?service=Grooming" class="service-link">
-    <div class="service-card">
-      <i class="fa-solid fa-scissors"></i>
-      <h3>Grooming</h3>
-      <p>Baths, trims, and nail care.</p>
-    </div>
-    <!-- Centered View Prices Button -->
-  <div class="pricing-btn-container">
-    <button class="pricing-btn" onclick="openPricing()">
-      <i class="fa-solid fa-tag"></i> View Prices
-    </button>
+ <a href="/booking?service=Grooming" class="service-link">
+  <div class="service-card">
+    <i class="fa-solid fa-scissors"></i>
+    <h3>Grooming</h3>
+    <p>Baths, trims, and nail care.</p>
   </div>
+</a>
+
+<!-- Centered View Prices Button -->
+<div class="pricing-btn-container">
+  <button class="pricing-btn" onclick="openPricing()">
+    <i class="fa-solid fa-tag"></i> View Prices
+  </button>
+</div>
+
   </a>
   </section>
  <section id="gallery">
