@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Location | Ricky's Doggy Daycare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --blue: #bbd8ee;
+      --yellow: #ffc767;
+      --white: #ffffff;
+      --light-blue: #e3f2fd;
+      --dark-blue: #1565c0;
+      --gray: #f5f5f5;
+      --text-dark: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-blue);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url("/images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--white);
+    }
+
+    nav {
+      background-color: var(--blue);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 i {
+      color: var(--yellow);
+      margin-right: 10px;
+    }
+
+    .location-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .location-details p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    .location-details i {
+      color: var(--blue);
+      margin-right: 10px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      background-color: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .location-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1><i class="fa-solid fa-location-dot"></i> Find Us</h1>
+  <p>Come visit Ricky’s Doggy Daycare 🐾</p>
+</header>
+
+<nav>
+  <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+  <a href="/about"><i class="fa-solid fa-paw"></i>About</a>
+  <a href="/booking"><i class="fa-solid fa-calendar-check"></i>Booking</a>
+  <a href="/location"><i class="fa-solid fa-map"></i>Location</a>
+</nav>
+
+<main>
+  <section>
+    <h2><i class="fa-solid fa-map-pin"></i>Our Location</h2>
+
+    <div class="location-wrapper">
+
+      <!-- Address & Info -->
+      <div class="location-details">
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          <strong>Address:</strong><br>
+          Ricky’s Doggy Daycare<br>
+          Cork City, Co. Cork, Ireland
+        </p>
+
+        <p>
+          <i class="fa-solid fa-clock"></i>
+          <strong>Opening Hours:</strong><br>
+          Monday – Friday: 7:30am – 6:30pm<br>
+          Saturday: 9:00am – 4:00pm
+        </p>
+
+        <p>
+          <i class="fa-solid fa-car"></i>
+          Easy parking available & convenient drop-off 🚗
+        </p>
+      </div>
+
+      <!-- Google Map -->
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps?q=Cork%20City%20Ireland&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><i class="fa-solid fa-paw"></i> © 2026 Ricky’s Doggy Daycare</p>
+</footer>
+
+</body>
+</html>

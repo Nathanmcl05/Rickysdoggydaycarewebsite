@@ -30,7 +30,9 @@ app.get('/register', (req, res) => {
 app.get('/gallery', (req, res) => {
     res.render('gallery')
 })
-
+app.get('/location', (req, res) => {
+    res.render('location')
+})
 
 
 //********************* Code to here *************/
